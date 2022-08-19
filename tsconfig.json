@@ -1,3 +1,11 @@
+//Após baixar o compilador TypeScript foi necessário criar este arquivo "tsconfig.json", que é o centro nervoso do compilador. Toda vez que executar esse compilador, ele vai ler esse arquivo 
+//para saber o que ele tem que fazer. Com isso, é preciso dizer a este arquivo através de "compilerOptions" onde os arquivos compilados serão gerados. Ou seja estamos dizendo que qualquer
+//arquivo modificado na pasta 'app' vai ser gerado na pasta 'dist' com a extensão "js" compilado transformado para JavaScript. Depois foi necessário acrescentar a este arquivo o 'noEmitOnError',
+//para dizer que se o arquivo TypeScript que estou salvando tiver um problema de compilação, que não faz sentido gerar um arquivo 'js' para ele, então nada vai acontecer, nenhum arquivo 'js' será gerado. 
+//Depois foi adicionado dentro do arquivo 'package.json', mais dois scrips: 'compile' e 'watch'. O 'compile' -> quando executado vai compilar, vai transformar meus arquivos 'ts' para 'js' na devida pasta
+//e para que o programa não fique rodando toda hora foi criado o 'watch' -> fica escutando qualquer modificação dentro da pasta 'dist' e se for modificado qualquer arquivo 'ts' lá dentro automaticamente ele
+//vai gerar o arquivo dentro da pasta 'js'.
+
 {
     "compilerOptions": {
         "outDir": "dist/js",
